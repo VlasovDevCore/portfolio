@@ -1,0 +1,66 @@
+/* Анимация исчезновения */
+.disappear {
+  animation: vanish 0.5s forwards;
+}
+
+@keyframes vanish {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/* Альтернативный вариант исчезновения через transition */
+.hidden-transition {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+/* Плавное покачивание */
+@keyframes gentle-bounce {
+  0%,
+  100% {
+    transform: translateY(0) rotate(180deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(180deg);
+  }
+}
+
+.bouncing-element {
+  animation: gentle-bounce 2s ease-in-out infinite;
+}
+
+/* Эффект расходящихся волн */
+@keyframes ripple {
+  75%,
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.ripple-effect {
+  animation: ripple 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+/* Плавное появление */
+@keyframes smooth-appear {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.invisible {
+  opacity: 0;
+}
+
+.visible {
+  animation: smooth-appear 1.2s ease-out forwards;
+}
