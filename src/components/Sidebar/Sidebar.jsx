@@ -84,7 +84,7 @@ const Sidebar = ({ isDark, toggleTheme, activeSection }) => {
             </button>
           )}
 
-          <div className="w-64 h-64 mx-auto">
+          <div className="w-52 h-52 mx-auto bg-[#0b0c0f] mt-4 rounded-full overflow-hidden">
             <img
               src={avatar}
               alt="Аватар"
